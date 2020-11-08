@@ -4,7 +4,7 @@ pub fn check_possibility(nums: Vec<i32>) -> bool {
         if nums[idx] > nums[idx + 1] {
             match pointer {
                 None => pointer = Some(idx),
-                Some(i) => return false,
+                Some(_) => return false,
             }
         }
     }
