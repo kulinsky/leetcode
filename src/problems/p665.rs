@@ -12,11 +12,7 @@ pub fn check_possibility(nums: Vec<i32>) -> bool {
         None => true,
         Some(0) => true,
         Some(i) => {
-            return if i == nums.len() - 2 {
-                true
-            } else if nums[i-1] <= nums[i+1] {
-                true
-            } else if nums[i] <= nums[i+2] {
+            return if i == nums.len() - 2 || nums[i - 1] <= nums[i + 1] || nums[i] <= nums[i + 2] {
                 true
             } else {
                 false
